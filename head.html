@@ -44,6 +44,23 @@
 <script nonce="aem" src="/scripts/aem.js" type="module"></script>
 <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
 <script nonce="aem" src="/scripts/commerce.js" type="module"></script>
+<!--SDK Alloy url-->
+<!-- Base code -->
+<script>
+  !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+  []).push(o),n[o]=function(){var u=arguments;return new Promise(
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
+  (window,["alloy"]);
+</script>
+<!-- Library loader -->
+<script src="https://cdn1.adoberesources.net/alloy/2.34.1/alloy.min.js" async></script>
+<script>
+ window.alloyConfig = {
+   edgeConfigId: "073dd940-81cd-4e70-bef5-6a0d9b01267f",
+   orgId: "F178953B584FE8E60A495C5C@AdobeOrg",
+   defaultConsent: "in"
+ };
+</script>
 
 <link rel="modulepreload" href="/scripts/__dropins__/tools/lib/aem/configs.js" />
 <link rel="modulepreload" href="/scripts/initializers/index.js" />
