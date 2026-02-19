@@ -171,3 +171,13 @@ loadPage();
   // eslint-disable-next-line import/no-unresolved
   import('https://da.live/scripts/dapreview.js').then(({ default: daPreview }) => daPreview(loadPage));
 }());
+
+sync function initAdobeWebSDK() {
+ alloy("configure", {
+   edgeConfigId: window.alloyConfig.edgeConfigId,
+   orgId: window.alloyConfig.orgId,
+   defaultConsent: "in"
+ });
+ console.log("Adobe Web SDK initialized");
+}
+initAdobeWebSDK();
