@@ -172,7 +172,7 @@ loadPage();
   import('https://da.live/scripts/dapreview.js').then(({ default: daPreview }) => daPreview(loadPage));
 }());
 
-sync function initAdobeWebSDK() {
+async function initAdobeWebSDK() {
  alloy("configure", {
    edgeConfigId: window.alloyConfig.edgeConfigId,
    orgId: window.alloyConfig.orgId,
