@@ -173,27 +173,27 @@ loadPage();
 }());
 
 async function initAdobeWebSDK() {
-   alloy("configure", {
+  alloy('configure', {
     edgeConfigId: window.alloyConfig.edgeConfigId,
     orgId: window.alloyConfig.orgId,
-    defaultConsent: "in"
-   });
-   console.log("Adobe Web SDK initialized");
-   sendPageView();
-  }
+    defaultConsent: 'in',
+  });
+  console.log('Adobe Web SDK initialized');
+  sendPageView();
+}
 
 function sendPageView() {
- alloy("sendEvent", {
-   renderDecisions: true,
-   xdm: {
-     eventType: "web.webpagedetails.pageViews",
-     web: {
-       webPageDetails: {
-         name: document.title,
-         URL: window.location.href
-       }
-     }
-   }
- });
+  alloy('sendEvent', {
+    renderDecisions: true,
+    xdm: {
+      eventType: 'web.webpagedetails.pageViews',
+      web: {
+        webPageDetails: {
+          name: document.title,
+          URL: window.location.href,
+        },
+      },
+    },
+  });
 }
 initAdobeWebSDK();
