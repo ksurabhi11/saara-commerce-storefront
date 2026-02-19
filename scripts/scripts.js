@@ -178,7 +178,6 @@ async function initAdobeWebSDK() {
     orgId: window.alloyConfig.orgId,
     defaultConsent: 'in',
   });
-  console.log('Adobe Web SDK initialized');
   sendPageView();
 }
 
