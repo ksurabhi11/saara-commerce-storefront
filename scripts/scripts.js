@@ -173,7 +173,7 @@ loadPage();
 }());
 
 async function initAdobeWebSDK() {
-  alloy('configure', {
+  window.alloy('configure', {
     edgeConfigId: window.alloyConfig.edgeConfigId,
     orgId: window.alloyConfig.orgId,
     defaultConsent: 'in',
@@ -183,7 +183,7 @@ async function initAdobeWebSDK() {
 }
 
 function sendPageView() {
-  alloy('sendEvent', {
+  window.alloy('sendEvent', {
     renderDecisions: true,
     xdm: {
       eventType: 'web.webpagedetails.pageViews',
